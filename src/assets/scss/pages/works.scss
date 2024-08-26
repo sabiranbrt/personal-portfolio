@@ -1,0 +1,101 @@
+.work_page {
+    padding-block: 150px;
+
+    .work_wrapper {
+        .work_tabs {
+            margin-top: 70px;
+
+            .tabs_wrapper {
+                .tab_bar {
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+
+                    .tab_bar_item {
+                        cursor: pointer;
+
+                        h4 {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 30px;
+                        }
+
+                        &.active {
+                            color: $primary-color;
+                        }
+                    }
+                }
+
+                .tab_items_wrapper {
+                    margin-top: 40px;
+                    display: flex;
+                    gap: 50px;
+                    --columns: 3;
+                    --gap: 50px;
+                    flex-wrap: wrap;
+
+                    .tab_items {
+                        width: calc((100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns)));
+                        height: 330px;
+                        position: relative;
+                        cursor: pointer;
+                        overflow: hidden;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            background: $primary-color;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            transition: all 0.3s ease-in;
+                            opacity: 0;
+                        }
+
+
+                        img {
+                            height: 100%;
+                            transition: all 0.3s ease;
+                        }
+
+                        .tab_detail {
+                            color: $white-color;
+                            position: absolute;
+                            bottom: 30px;
+                            left: 20px;
+                            z-index: 9999;
+                            transform: translateY(50%);
+                            transition: all 0.3s ease;
+                            opacity: 0;
+
+                            h3 {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            h4 {
+                                font-size: 16px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        &:hover {
+                            &::after {
+                                opacity: 0.8;
+                            }
+
+                            img {
+                                transform: scale(1.1);
+                            }
+
+                            .tab_detail {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.nested_layout {
+    display: flex;
+    position: relative;
+
+    .sidebar {
+        width: 450px;
+        height: 100vh;
+        transition: all 0.3s ease;
+        transform: translateX(0);
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    .sidebar_w-0 {
+        width: 0%;
+    }
+
+    .hide_sidebar {
+        transform: translateX(-100%);
+    }
+
+    .homepage {
+        position: relative;
+        width: 100%;
+        padding-left: 450px;
+    }
+}

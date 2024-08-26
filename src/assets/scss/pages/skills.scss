@@ -1,0 +1,52 @@
+.skill_page {
+    background: $grey-light-color;
+    padding-block: 150px;
+
+    .skill_wrapper {
+        .skills_wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+            row-gap: 80px;
+
+            .skills_points {
+                h4 {
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 28.6px;
+                }
+
+                .count {
+                    margin-top: 40px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                    --gap: 20px;
+                    --columns: 2;
+                    flex-wrap: wrap;
+
+                    .box {
+                        .box_color {
+                            background: rgb(0, 88, 181, 0.10);
+                            height: 70px;
+                            width: 230px;
+                            display: flex;
+                            align-items: center;
+
+                            p {
+                                margin-inline: 20px;
+                                color: $grey-color;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .box_color {
+                        background: rgb(247, 206, 0, 0.10) !important;
+                    }
+                }
+            }
+        }
+    }
+}

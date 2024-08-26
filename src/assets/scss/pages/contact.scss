@@ -1,0 +1,90 @@
+.contact_page {
+    padding-block: 150px;
+
+    .contact_wrapper {
+        .get_in_touch {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+
+            .address {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .address_logo {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .logo {
+                        div {
+                            div {
+                                background: $primary-color;
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+
+                    .address_detail {
+                        h3 {
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+
+                        .social_sites {
+                            display: flex;
+                            gap: 20px;
+                            margin-top: 10px;
+
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form {
+                form {
+                    .form_wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        input,
+                        textarea {
+                            padding: 15px 10px;
+                            border: 1px solid $grey-color;
+                            font-size: 16px;
+
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+
+                        .form_text_box {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                        }
+
+                        .form_text_area {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}

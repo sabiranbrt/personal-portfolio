@@ -1,0 +1,71 @@
+.home_page_items {
+    position: relative;
+    background: $grey-light-color;
+
+    .home_page {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .image {
+            width: 30%;
+            height: 300px;
+            position: relative;
+
+            .profile_image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: url('/src/assets/images/profilephoto.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-blend-mode: multiply;
+                box-shadow: inset 0px 0px 0px 9px rgba(255, 255, 255, .3);
+
+            }
+
+            img {
+                height: 100%;
+
+            }
+        }
+
+        .title {
+            width: 70%;
+
+            h1 {
+                text-transform: uppercase;
+            }
+
+            .description {
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $grey-color;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    line-height: normal !important;
+                }
+
+                .social_sites {
+                    margin-top: 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
