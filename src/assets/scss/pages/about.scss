@@ -1,15 +1,32 @@
 .about_page {
     padding-top: 150px;
 
+    @include max(992px) {
+        padding-top: 100px;
+    }
+
     .about_wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 100px;
 
+        @include max(992px) {
+            gap: 50px;
+        }
+
+        @include max(768px) {
+            flex-direction: column;
+        }
+
         .about_img {
             width: 50%;
             height: 495px;
+
+            @include max(768px) {
+                width: 100%;
+            }
+
 
             img {
                 height: 100%;
@@ -18,6 +35,11 @@
 
         .about_details {
             width: 50%;
+
+            @include max(768px) {
+                width: 100%;
+            }
+
 
             .about_details_wrapper {
                 .discription {
@@ -55,6 +77,10 @@
             position: relative;
             z-index: 999;
 
+            @include max(1600px) {
+                justify-content: space-around;
+            }
+
             .count_items {
                 text-align: center;
                 color: $white-color;
@@ -81,9 +107,17 @@
             display: flex;
             gap: 30px;
 
+            @include max(768px) {
+                flex-direction: column;
+            }
+
             .timeline_wrapper {
                 width: 50%;
                 margin-top: 70px;
+
+                @include max(768px) {
+                    width: 100%;
+                }
 
                 h1 {
                     font-size: 22px;

@@ -56,6 +56,10 @@
     font-size: 48px;
     font-weight: 800;
     line-height: 93.6px;
+
+    @include max(768px) {
+        font-size: 32px;
+    }
 }
 
 .head_title {

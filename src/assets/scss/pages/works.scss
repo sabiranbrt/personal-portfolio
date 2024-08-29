@@ -1,9 +1,17 @@
 .work_page {
     padding-block: 150px;
 
+    @include max(992px) {
+        padding-top: 100px;
+    }
+
     .work_wrapper {
         .work_tabs {
             margin-top: 70px;
+
+            @include max(992px) {
+                margin-top: 50px;
+            }
 
             .tabs_wrapper {
                 .tab_bar {
@@ -33,6 +41,10 @@
                     --columns: 3;
                     --gap: 50px;
                     flex-wrap: wrap;
+
+                    @include max(768px) {
+                        --columns: 1;
+                    }
 
                     .tab_items {
                         width: calc((100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns)));

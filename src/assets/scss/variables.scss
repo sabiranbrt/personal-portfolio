@@ -26,6 +26,18 @@ img {
 
 .container {
     margin: 0 200px;
+
+    @include max(1600px) {
+        margin: 0 100px;
+    }
+
+    @include max(992px) {
+        margin: 0 70px;
+    }
+
+    @include max(768px) {
+        margin: 0 30px;
+    }
 }
 
 // color

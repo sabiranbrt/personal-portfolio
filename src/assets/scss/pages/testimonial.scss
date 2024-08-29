@@ -2,6 +2,10 @@
     padding-block: 150px;
     background: $grey-light-color;
 
+    @include max(992px) {
+        padding-block: 100px;
+    }
+
     .testimonial_wrapper {
         .testimonial_client {
             margin-top: 40px;

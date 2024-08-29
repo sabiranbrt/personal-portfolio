@@ -8,10 +8,29 @@
         align-items: center;
         gap: 40px;
 
+
+        @include max(992px) {
+            gap: 50px;
+        }
+
+        @include max(768px) {
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+        }
+
         .image {
             width: 30%;
             height: 300px;
             position: relative;
+
+            @include max(992px) {
+                width: 40%;
+            }
+
+            @include max(768px) {
+                width: 50%;
+            }
 
             .profile_image {
                 position: absolute;
@@ -25,7 +44,6 @@
                 background-repeat: no-repeat;
                 background-blend-mode: multiply;
                 box-shadow: inset 0px 0px 0px 9px rgba(255, 255, 255, .3);
-
             }
 
             img {
@@ -36,6 +54,15 @@
 
         .title {
             width: 70%;
+
+            @include max(992px) {
+                width: 60%;
+            }
+
+            @include max(768px) {
+                width: inherit;
+                text-align: center;
+            }
 
             h1 {
                 text-transform: uppercase;
@@ -56,6 +83,10 @@
                     display: flex;
                     align-items: center;
                     gap: 20px;
+
+                    @include max(768px) {
+                        justify-content: center;
+                    }
 
                     svg {
                         width: 20px;
