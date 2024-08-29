@@ -2,12 +2,21 @@
     background: $grey-light-color;
     padding-block: 150px;
 
+    @include max(992px) {
+        padding-block: 100px;
+    }
+
     .skill_wrapper {
         .skills_wrap {
             display: flex;
             justify-content: space-between;
             margin-top: 70px;
             row-gap: 80px;
+
+            @include max(768px) {
+                flex-direction: column;
+            }
+
 
             .skills_points {
                 h4 {
@@ -21,9 +30,11 @@
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 20px;
-                    --gap: 20px;
-                    --columns: 2;
-                    flex-wrap: wrap;
+
+                    @include max(768px) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
 
                     .box {
                         .box_color {
@@ -33,10 +44,22 @@
                             display: flex;
                             align-items: center;
 
+                            @include max(768px) {
+                                width: 100%;
+                            }
+
                             p {
                                 margin-inline: 20px;
                                 color: $grey-color;
                             }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .count {
+                        @include max(992px) {
+                            grid-template-columns: repeat(1, 1fr);
                         }
                     }
                 }

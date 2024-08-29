@@ -1,11 +1,20 @@
 .contact_page {
     padding-block: 150px;
 
+    @include max(992px) {
+        padding-block: 100px;
+    }
+
     .contact_wrapper {
         .get_in_touch {
             margin-top: 80px;
             display: flex;
             justify-content: space-between;
+
+            @include max(768px) {
+                flex-direction: column;
+                margin-top: 40px;
+            }
 
             .address {
                 display: flex;
@@ -52,6 +61,11 @@
             }
 
             .form {
+
+                @include max(768px) {
+                    margin-top: 20px;
+                }
+
                 form {
                     .form_wrapper {
                         display: flex;
@@ -67,18 +81,30 @@
                             &:focus-visible {
                                 outline: none;
                             }
+
+                            @include max(786px) {
+                                width: 100%;
+                            }
                         }
 
                         .form_text_box {
                             display: flex;
                             align-items: center;
                             gap: 20px;
+
+                            @include max(768px) {
+                                flex-direction: column;
+                            }
                         }
 
                         .form_text_area {
                             display: flex;
                             flex-direction: column;
                             gap: 20px;
+
+                            a {
+                                text-align: center;
+                            }
                         }
                     }
 
