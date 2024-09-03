@@ -47,11 +47,15 @@
             outline: none;
             border: none;
             cursor: pointer;
-            position: absolute;
+            position: fixed;
             top: 28px;
             left: 25px;
             border-radius: 50%;
             background: transparent;
+
+            @include min(992px) {
+                display: none;
+            }
 
             svg {
                 path {
