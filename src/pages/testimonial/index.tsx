@@ -39,13 +39,16 @@ const Testimonials = () => {
           </div>
           <Swiper
             className="testimonial_client"
-            slidesPerView={2}
+            // slidesPerView={2}
             modules={[Autoplay]}
             spaceBetween={20}
             loop={true}
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
+            }}
+            breakpoints={{
+              768: { slidesPerView: 2 },
             }}
           >
             {testi_info.map((items) => {

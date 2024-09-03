@@ -3,6 +3,8 @@ import WebApp from "../../assets/images/Item.png";
 import WebApp1 from "../../assets/images/item2.png";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
 
 const Works = () => {
   const tabsItems = [
@@ -69,11 +71,15 @@ const Works = () => {
   ];
 
   const [showTabs, setShowTabs] = useState("All");
+  const [openModal, setOpen] = useState<number | null>(null);
 
   const handleTabs = (items: string) => {
     setShowTabs(items);
   };
 
+  const handleModal = (id: number | null) => {
+    setOpen(id);
+  };
   return (
     <div className="work_page">
       <div className="container">
@@ -105,9 +111,10 @@ const Works = () => {
                   <>
                     {items.tabs === showTabs ? (
                       <div className="tab_items_wrapper">
-                        {items.subtabs.map((items) => {
+                        {items.subtabs.map((items, index) => {
                           return (
                             <motion.div
+                              onClick={() => handleModal(index)}
                               className="tab_items"
                               initial={{ scale: 0.9 }}
                               animate={{ scale: 1 }}
@@ -130,6 +137,13 @@ const Works = () => {
           </div>
         </div>
       </div>
+      <Modal open={openModal !== null} onClose={() => handleModal(null)} center>
+        <h2>
+          {openModal !== null
+            ? `Modal for item ${openModal}`
+            : "Simple centered modal"}
+        </h2>
+      </Modal>
     </div>
   );
 };
